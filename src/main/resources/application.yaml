@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: WhisperSpace_backend
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+  data:
+    mongodb:
+      uri: ${DB_URI}
+app:
+  security:
+    jwt:
+      secret: whisperspace-dev-secret
+      expiration-seconds: 86400
+server:
+  port: ${PORT:8080}
+kind: Application
