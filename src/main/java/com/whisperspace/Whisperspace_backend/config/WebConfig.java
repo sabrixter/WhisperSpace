@@ -18,7 +18,8 @@ public class WebConfig {
                         .allowedOriginPatterns(
                                 "http://localhost:5173",
                                 "http://127.0.0.1:5173",
-                                "http://192.168.29.31:5173"
+                                "http://192.168.29.31:5173",
+                                "https://whisperspace-chat.vercel.app"
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS")
                         .allowedHeaders("*")
