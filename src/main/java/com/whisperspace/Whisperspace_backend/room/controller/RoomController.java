@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.*;
 public class RoomController {
 
     private RoomService roomService;
+    public RoomController(RoomService roomService) {
+        this.roomService = roomService;
+    }
     @PostMapping("/create")
     public CreateRoomRes createroom(@RequestBody CreateRoom req){
         return roomService.create(req);
