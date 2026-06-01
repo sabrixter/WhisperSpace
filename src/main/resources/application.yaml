@@ -2,9 +2,9 @@ spring:
   application:
     name: WhisperSpace_backend
   datasource:
-    url: jdbc:postgresql://ep-little-grass-apei3bfb-pooler.c-7.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
-    username: neondb_owner
-    password: npg_K3wChzvLZIy4
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
@@ -12,8 +12,7 @@ spring:
       ddl-auto: update
   data:
     mongodb:
-      uri: mongodb+srv://smukh095_db_user:HnXqW9KpnvAZA3df@cluster0.w9h8noy.mongodb.net/whisperspace?retryWrites=true&w=majority&appName=Cluster0
-      # uri: mongodb+srv://smukh095_db_user:A3I20wXPd3d9qLBn@cluster0.w9h8noy.mongodb.net/?appName=Cluster0
+      uri: ${DB_URI}
 app:
   security:
     jwt:
