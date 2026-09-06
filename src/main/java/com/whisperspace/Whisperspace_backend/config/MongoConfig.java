@@ -24,7 +24,7 @@ public class MongoConfig {
     @Bean
     public MongoClient mongoClient() {
         return MongoClients.create(
-                "mongodb+srv://smukh095_db_user:HnXqW9KpnvAZA3df@cluster0.w9h8noy.mongodb.net/whisperspace?retryWrites=true&w=majority&appName=Cluster0"
+                "mongodb+srv://smukh095:wD8Ip9WoTFKtHi5Z@cluster0.w9h8noy.mongodb.net/whisperspace?retryWrites=true&w=majority&appName=Cluster0&authSource=admin"
         );
     }
 
